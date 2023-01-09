@@ -1,0 +1,21 @@
+
+news
+	dich vu 1 cap 275 330
+	duan 390x390
+	tin tuc 585 420
+	fb 135 135
+newsletter
+	ht, sdt, nd
+photo
+	thuonghieu 180x92
+	logo 82x65
+	banner
+	social 21x17
+	slide 655
+product
+	sp 2 cap 2gia 276 267
+	
+static
+	lienhe
+	gioithieu 550 450
+	gio mo cua
