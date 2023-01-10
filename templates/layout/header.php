@@ -1,10 +1,6 @@
 <div class="header">
     <div class="wrapper">
-        <!-- <div class="header__logo">
-            <a href="" title="<?=trangchu?>" class="peShiner">
-                <?=$func->getImage(['sizes' => '180x96x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $logo['photo'], 'alt' => $setting['name'.$lang]])?>
-            </a>
-        </div> -->
+
         <div class="headerr">
             <div class="header__left">
                 <div class="header__info-item">
@@ -22,7 +18,7 @@
                         <img src="assets/images/images/icon-phone.png" alt="">
                     </div>
                     <span>
-                        Hotline: <a
+                        Hotline: <a class="text-decoration-none"
                             href="tel:<?=$func->formatPhone($optsetting['phone'])?>"><?=$func->formatPhone($optsetting['phone'])?></a>
                     </span>
                 </div>

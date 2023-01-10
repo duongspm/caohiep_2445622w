@@ -1,4 +1,11 @@
 
+bkmenu đổi màu cam mờ
+gioi thieu nhieu bai viet check nb 1 bai
+dong dau bai viet 
+slogan dat lich
+du an thi cong bo danh muc cap 1
+footer tu nhap
+footer dich vu-> cap 1
 news
 	dich vu 1 cap 275 330
 	duan 390x390

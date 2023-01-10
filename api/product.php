@@ -41,19 +41,27 @@ $countItems = count($cache->get($sql, $params, 'result', 7200));
 $pagingItems = $pagingAjax->getAllPageLinks($countItems, $pageLink, $eShow);
 ?>
 <?php if ($countItems) { ?>
-<div class="grid-page w-clear">
+<div class="grid-page-pro w-clear">
     <?php foreach ($items as $k => $v) { ?>
-    <div class="product">
+    <div class="productt">
         <a class="box-product text-decoration-none" href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?>">
-            <p class="pic-product zoom_hinh hover_sang">
-                <?= $func->getImage(['sizes' => '286x283x1', 'isWatermark' => true, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-            </p>
+            <div class="pic-product">
+                <div class="zoom_hinh hover_sang">
+                    <?= $func->getImage(['sizes' => '286x283x1', 'isWatermark' => true, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+                </div>
+            </div>
+
             <h3 class="name-product text-split"><?= $v['name' . $lang] ?></h3>
-            <p class="price-product">
-                <span class="price-price">Giá: </span>
+            <div class="price-product">
+                <?php if($v['discount']) { ?>
+                <span class="price-new"><?=$func->formatMoney($v['sale_price'])?></span>
+                <span class="price-old"><?=$func->formatMoney($v['regular_price'])?></span>
+                <span class="price-per"><?='-'.$v['discount'].'%'?></span>
+                <?php } else { ?>
                 <span
-                    class="price-new"><?= ($v['regular_price']) ? $func->formatMoney($v['regular_price']) : "Liên hệ" ?></span>
-            </p>
+                    class="price-new"><?=($v['regular_price']) ? $func->formatMoney($v['regular_price']) : "Liên hệ: " . $func->formatPhone($optsetting['hotline'])?></span>
+                <?php } ?>
+            </div>
         </a>
     </div>
     <?php } ?>

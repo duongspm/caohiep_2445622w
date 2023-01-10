@@ -1,7 +1,12 @@
-<div class="footer">
+<div class="footer pd">
     <div class="wrapper">
-        <div class="footerr">
-            <div class="footer-item">
+        <div class="footerr mr-top ">
+            <div class="footer-item footer-item1">
+                <div class="footer-title">
+                    <span>thông tin công ty</span>
+                    <div class="footer_line">
+                    </div>
+                </div>
                 <div class="footer-name">
                     <span><?=$footer['name'.$lang]?></span>
                 </div>
@@ -11,29 +16,39 @@
                 <div class="footer-title">
                     <span>Chính sách</span>
                     <div class="footer_line">
-                        <img src="assets/images/images/ft-line.png" alt="<?=$setting['name'.$lang]?>">
                     </div>
                 </div>
                 <div class="footer__list">
                     <?php if(!empty($policy)){?>
                     <ul>
                         <?php foreach($policy as $v){?>
-                        <li><a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>"><?=$v['name'.$lang]?></a></li>
+                        <li><a class="text-decoration-none" href="<?=$v[$sluglang]?>"
+                                title="<?=$v['name'.$lang]?>"><?=$v['name'.$lang]?></a>
+                        </li>
                         <?php }?>
                     </ul>
                     <?php }?>
                 </div>
-                <div class="footer-social">
-                    <?php if(!empty($social)){foreach($social as $v){?>
-                    <a class="social-item" href="<?=$v['link']?>">
-                        <?=$func->getImage(['class' => '', 'sizes' => '40x40x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $setting['name'.$lang]])?>
-                    </a>
-                    <?php }}?>
-
-                </div>
             </div>
             <div class="footer-item">
-                <div class="footer-fb">
+                <div class="footer-title">
+                    <span>Dịch vụ</span>
+                    <div class="footer_line">
+                    </div>
+                </div>
+                <div class="footer__list">
+                    <?php if(!empty($dichvulist)){?>
+                    <ul>
+                        <?php foreach($dichvulist as $v){?>
+                        <li><a class="text-decoration-none" href="<?=$v[$sluglang]?>"
+                                title="<?=$v['name'.$lang]?>"><?=$v['name'.$lang]?></a></li>
+                        <?php }?>
+                    </ul>
+                    <?php }?>
+                </div>
+            </div>
+            <div class="footer-fb">
+                <div class="">
                     <div class="fb-page" data-href="<?=$optsetting['fanpage']?>" data-tabs="timeline" data-width="500"
                         data-height="230" data-small-header="true" data-adapt-container-width="true"
                         data-hide-cover="false" data-show-facepile="true">
@@ -46,27 +61,21 @@
                 </div>
             </div>
         </div>
-        <div class="footer__tag mr-bottom mr-top">
-            <span>tag từ khóa: </span>
-            <?php if(!empty($tag)){
-                foreach($tag as $v){?>
-
-            <a class="tag__item" href="<?=$v['desc'.$lang]?>" title="<?=$v['name'.$lang]?>">
-                <?=$v['name'.$lang]?>
-            </a>
-
-            <?php }}?>
-        </div>
     </div>
-    <div class="copyright">
-        <div class="wrapper copyrightt">
-            <div class="copyright-left">
-                <span>Copyright © 2022
-                    <span class="settingname">
-                        <?=$setting['name'.$lang]?>
-                    </span>. Design by Nina Co.,Ltd
-                </span>
-            </div>
+</div>
+<div class="copyright">
+    <div class="wrapper copyrightt">
+        <div class="copyright-left">
+            <span>Copyright © 2022
+                <span class="settingname">
+                    <?=$setting['name'.$lang]?>
+                </span>. Web design : Nina Co.,Ltd
+            </span>
+        </div>
+        <div class="copyright-right">
+            <span><?= dangonline ?>: <?= $online ?></span>|
+            <span><?= homnay ?>: <?= $counter['today'] ?></span>|
+            <span><?= tongtruycap ?>: <?= $counter['total'] ?></span>
         </div>
     </div>
 </div>

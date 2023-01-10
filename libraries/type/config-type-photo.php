@@ -35,7 +35,7 @@
     $config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
     $config['photo']['photo_static'][$nametype]['images'] = true;
     $config['photo']['photo_static'][$nametype]['watermark'] = true;
-    $config['photo']['photo_static'][$nametype]['watermark-advanced'] = false;
+    $config['photo']['photo_static'][$nametype]['watermark-advanced'] = true;
     $config['photo']['photo_static'][$nametype]['width'] = 70;
     $config['photo']['photo_static'][$nametype]['height'] = 50;
     $config['photo']['photo_static'][$nametype]['thumb'] = '70x50x1';
@@ -75,6 +75,7 @@
     $config['photo']['man_photo'][$nametype]['title_main_photo'] = "Thương hiệu";
     $config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
     $config['photo']['man_photo'][$nametype]['number_photo'] = 6;
+    $config['photo']['man_photo'][$nametype]['name_photo'] = true;
     $config['photo']['man_photo'][$nametype]['images_photo'] = true;
     $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
     $config['photo']['man_photo'][$nametype]['link_photo'] = true;

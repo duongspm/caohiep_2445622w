@@ -40,9 +40,9 @@ NN_FRAMEWORK.GoTop = function(){
     });
     $(window).scroll(function(){
         if($(this).scrollTop()){
-            $('.menu-list').addClass('sticky');
+            $('.menu').addClass('sticky');
         }else{
-            $('.menu-list').removeClass('sticky');
+            $('.menu').removeClass('sticky');
         }
     });
 
@@ -62,6 +62,7 @@ NN_FRAMEWORK.loadPagingListService = function () {
         );
     });
 };
+
 NN_FRAMEWORK.Slickvideo = function(){
     $('.slider-for').slick({
         slidesToShow: 1,
@@ -553,7 +554,7 @@ NN_FRAMEWORK.countNumber = () => {
    
 }
 NN_FRAMEWORK.SlickBlog = () => {
-    $('.slickblog').slick({
+    $('.slick__blog').slick({
         autoplay: true,
         autoplaySpeed: 3000,
         speed: 1000,
@@ -839,7 +840,7 @@ NN_FRAMEWORK.Cart = function(){
 
 /* Ready */
 $(document).ready(function(){
-    NN_FRAMEWORK.countNumber();
+    // NN_FRAMEWORK.countNumber();
     NN_FRAMEWORK.Lazys();
     NN_FRAMEWORK.Tools();
     NN_FRAMEWORK.Popup();
@@ -849,7 +850,7 @@ $(document).ready(function(){
     NN_FRAMEWORK.Menu();
     NN_FRAMEWORK.OwlPage();
     NN_FRAMEWORK.Pagings();
-    NN_FRAMEWORK.Slickvideo();
+    // NN_FRAMEWORK.Slickvideo();
     // NN_FRAMEWORK.Cart();
     NN_FRAMEWORK.Videos();
     NN_FRAMEWORK.Photobox();
@@ -858,10 +859,10 @@ $(document).ready(function(){
     NN_FRAMEWORK.DomChange();
     NN_FRAMEWORK.TickerScroll();
     // NN_FRAMEWORK.DatePicker();
-    NN_FRAMEWORK.peShiner();
-    NN_FRAMEWORK.peShiner2();
+    // NN_FRAMEWORK.peShiner();
+    // NN_FRAMEWORK.peShiner2();
     NN_FRAMEWORK.SlickBlog();
-    NN_FRAMEWORK.FlipsterVideo();
+    // NN_FRAMEWORK.FlipsterVideo();
     NN_FRAMEWORK.flip();
     NN_FRAMEWORK.loadNameInputFile();
     NN_FRAMEWORK.loadPagingList();

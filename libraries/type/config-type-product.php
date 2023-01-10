@@ -16,7 +16,7 @@
     $config['product'][$nametype]['desc_cke'] = true;
     $config['product'][$nametype]['regular_price'] = true;
     $config['product'][$nametype]['sale_price'] = true;
-    $config['product'][$nametype]['discount'] = false;
+    $config['product'][$nametype]['discount'] = true;
 
     $config['product'][$nametype]['schema'] = true;
     $config['product'][$nametype]['content'] = true;
